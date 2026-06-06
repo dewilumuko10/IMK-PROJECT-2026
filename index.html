@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun English Learning - Petualangan Kelas 3-4 SD</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Classroom Background -->
+    <div class="classroom-bg">
+        <div class="chalkboard"></div>
+        <div class="classroom-decorations">
+            <div class="window"></div>
+            <div class="window"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header with Teacher Character -->
+        <div class="header">
+            <div class="teacher-character">
+                <div class="teacher-avatar">👨‍🏫</div>
+                <div class="speech-bubble">
+                    <p id="teacherMessage">Hello! Selamat datang di kelas Bahasa Inggris! 🎉</p>
+                </div>
+            </div>
+            
+            <h1>
+                <span class="book-icon">📚</span>
+                English Adventure
+                <span class="pencil-icon">✏️</span>
+            </h1>
+            <p class="subtitle">Petualangan Belajar Bahasa Inggris Kelas 3-4 SD</p>
+            
+            <!-- Book Reference -->
+            <div class="book-reference">
+                <div class="book-icon-ref">📖</div>
+                <div class="book-info">
+                    <h4>Referensi Kurikulum Merdeka:</h4>
+                    <p><strong>Kelas 3:</strong> "My Next Words Grade 3" - Kemendikbudristek (2021)</p>
+                    <p><strong>Kelas 4:</strong> "My Next Words Grade 4" - Kemendikbudristek (2021)</p>
+                    <span class="curriculum-badge">✅ Capaian Pembelajaran Fase B</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Class Selector -->
+        <div class="class-selector">
+            <div class="selector-label">
+                <span class="chalkboard-icon">🎯</span>
+                Pilih Kelasmu:
+            </div>
+            <button class="class-btn active" onclick="selectClass(3)">
+                <span class="grade-number">3</span>
+                <span class="grade-label">Kelas 3</span>
+            </button>
+            <button class="class-btn" onclick="selectClass(4)">
+                <span class="grade-number">4</span>
+                <span class="grade-label">Kelas 4</span>
+            </button>
+        </div>
+
+        <!-- Progress Journey -->
+        <div class="progress-container">
+            <div class="progress-header">
+                <div class="progress-title">
+                    <span class="trophy-icon">🏆</span>
+                    Perjalanan Belajarmu
+                </div>
+                <div class="progress-stats">
+                    <span class="star-count">⭐ <span id="starCount">0</span></span>
+                    <span class="progress-text"><span id="progressText">0</span>%</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill">
+                    <div class="progress-train">🚂</div>
+                </div>
+            </div>
+            <div class="progress-milestones">
+                <div class="milestone">📍 Start</div>
+                <div class="milestone">🏫 School</div>
+                <div class="milestone">🌳 Park</div>
+                <div class="milestone">🏰 Castle</div>
+            </div>
+        </div>
+
+        <!-- Main Menu - Learning Journey Map -->
+        <div id="mainMenu">
+            <h2 class="journey-title">
+                🗺️ Peta Petualangan Belajar
+            </h2>
+            <div class="journey-map" id="journeyMap">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Learning Content Container -->
+        <div id="learningContent" class="learning-content">
+            <div class="content-header">
+                <h2 id="contentTitle"></h2>
+                <button class="back-btn" onclick="backToMenu()">
+                    <span class="back-arrow">←</span>
+                    Kembali ke Peta
+                </button>
+            </div>
+            <div id="contentArea"></div>
+        </div>
+
+        <!-- Achievement Popup -->
+        <div id="achievementPopup" class="achievement-popup">
+            <div class="achievement-content">
+                <div class="achievement-stars">⭐⭐⭐</div>
+                <h3>Selamat!</h3>
+                <p id="achievementText"></p>
+                <button onclick="closeAchievement()">Lanjut! 🎉</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-books">📚</div>
+            <div class="loading-text">Memuat Petualangan...</div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
